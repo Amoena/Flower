@@ -1,14 +1,14 @@
 jQuery(function($) {
 $( "#contacts" ).accordion();
-$("#articles img").hover(
+$("#articles article").hover(
     function () {
-        $(this).animate({
+        $(this).find("img").animate({
             height: '+=10px',
             width: '+=10px'
           },50)
     },
     function () {
-        $(this).animate({
+        $(this).find("img").animate({
         height: '-=10px',
         width: '-=10px'
         },50)
@@ -17,7 +17,7 @@ $("#articles img").hover(
     $(".nav li .home").hover(
         function () {
             $(this).css('background-position', '-241px 0px');
-            $(this).css('color', '#b1a7aa');
+            $(this).css('color', '#5a895e');
         },
         function () {
             $(this).css('background-position', '0px 0px');
@@ -26,7 +26,7 @@ $("#articles img").hover(
     $(".nav li .info").hover(
         function () {
             $(this).css('background-position', '-241px -141px');
-            $(this).css('color', '#b1a7aa');
+            $(this).css('color', '#5a895e');
         },
         function () {
             $(this).css('background-position', '0px -141px');
@@ -35,7 +35,7 @@ $("#articles img").hover(
     $(".nav li .contacts").hover(
         function () {
             $(this).css('background-position', '-241px -282px');
-            $(this).css('color', '#b1a7aa');
+            $(this).css('color', '#5a895e');
         },
         function () {
             $(this).css('background-position', '0px -282px');

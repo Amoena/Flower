@@ -39,7 +39,6 @@ nav .nav li{
     text-align: center;
     overflow: visible;
 
-
 }
 
 nav .nav li a{
@@ -67,16 +66,20 @@ nav .nav li .contacts{
 #big-container{
     width: 1000px;
     min-width: 600px;
-    margin: 15px auto;
-    padding: 10px;
-    background: -webkit-linear-gradient(top, #2c2829 20%, #4a734d 80%);
+    margin: auto;
+    padding: 30px;
+    background: -webkit-linear-gradient(top, #666d61 20%, #4a734d 80%);
+    background: -ms-linear-gradient(top, #666d61 20%, #4a734d 80%);
+    background: -moz-linear-gradient(top, #666d61 20%, #4a734d 80%);
+    background-color: #666d61;
     border: 1px solid #b1a7aa;
 }
-
+/*----------------- article's block -------------------*/
 #articles{
     display: inline-block;
     width: 60%;
     padding: 10px;
+    font-family: 'Courier New', sans-serif;
 }
 article {
     padding: 10px;
@@ -84,7 +87,7 @@ article {
 }
 
 article:hover{
-    background-color: #e2d4d8;
+    border: 1px solid #b1a7aa;
 }
 
     #articles span{
@@ -95,7 +98,8 @@ article:hover{
         width: 300px;
         height: 200px;
         display: inline-block;
-        margin: 20px;
+        margin: 25px;
+
     }
         #articles .odd .box-for-img{
             float: right;
@@ -106,17 +110,28 @@ article:hover{
 #articles article p{
     text-align: justify;
 }
-
+#articles .odd .box-for-img img{
+    -webkit-transform: rotate(12deg);
+    -moz-transform: rotate(12deg);
+    -ms-transform: rotate(12deg);
+}
+#articles .even .box-for-img img{
+    -webkit-transform: rotate(-12deg);
+    -moz-transform: rotate(12deg);
+    -ms-transform: rotate(12deg);
+}
+/*------------ contact's block -------------------*/
 #contacts{
-    font-family: 'Times New Roman';
+    font-family: 'Courier New', sans-serif;
     font-size: 14px;
     display: inline-block;
+    padding: 10px;
     width: 35%;
     float: right;
 }
     #contacts h3{
-        font-family: 'Kaushan Script';
-        font-size: 18px;
+        font-family: 'Courier New', sans-serif;
+        font-size: 14px;
     }
 
     #contacts p{
