@@ -1,66 +1,37 @@
+/* start reset css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 body{
-    margin: auto;
     background-color: #2c2829;
+    padding: 30px 0;
 }
 
 .header{
-    height: 100px;
-    margin: 50px;
+    width: 1000px;
+    min-width: 600px;
+    height: 130px;
+    margin: auto;
     padding: 0 30px;
     font-family: 'Courier New', sans-serif;
     color: #b1a7aa;
-}
-h1{
-    display: inline-block;
-    font-size: 70px;
-}
-/*.nav,h1,nav {
-    display: inline-block;
-    margin: 0;
-*/
-nav{
-    float: right;
-    overflow: visible;
-    height: 100px;
-
-
-}
-nav .nav{
-    overflow: visible;
-    height: 100px;
-    display: inline-block;
-    margin: 0;
-}
-nav .nav li{
-    display: inline-block;
-    margin: 0px;
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    overflow: visible;
-
-}
-
-nav .nav li a{
-   background-image: url("img/nav.png") ;
-   width: 59px;
-   height: 74px;
-   display: inline-block;
-   color: #2c2829;
-}
-nav .nav li a:hover{
-    cursor: pointer;
-}
-nav .nav li a span{
-    display: inline-block;
-    padding: 100px 0;
-}
-nav .nav li .info{
-    background-position: 0 -141px;
-    height: 74px;
-}
-nav .nav li .contacts{
-    background-position: 0 -282px;
 }
 
 #big-container{
@@ -74,61 +45,138 @@ nav .nav li .contacts{
     background-color: #666d61;
     border: 1px solid #b1a7aa;
 }
-/*----------------- article's block -------------------*/
-#articles{
+/*----------------headers and nav styles -------------*/
+h1{
     display: inline-block;
+    font-size: 70px;
+}
+
+nav{
+    float: right;
+    overflow: visible;
+}
+
+.nav{
+    overflow: visible;
+    height: 130px;
+    display: inline-block;
+    padding: 0 10px;
+   background-color: #2c2829;
+}
+.nav li{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    overflow: visible;
+}
+
+.nav li a{
+   background-image: url("img/nav.png") ;
+   width: 59px;
+   height: 74px;
+   display: inline-block;
+   color: #2c2829; /*for text*/
+}
+
+.nav li a:hover{
+    cursor: pointer;
+}
+.nav li a span{
+    display: inline-block;
+    padding: 100px 0;
+}
+.nav li .home:hover{
+    background-position: -241px 0px;
+    color: #5a895e;
+ }
+.nav li .info{
+    background-position: 0 -141px;
+    height: 74px;
+}
+.nav li .info:hover{
+    background-position: -241px -141px;
+    color: #5a895e;
+}
+
+.nav li .contacts{
+    background-position: 0 -282px;
+}
+.nav li .contacts:hover{
+    background-position: -241px -282px;
+    color: #5a895e;
+}
+/*----------------- article's block && contact's in big-container -------------------*/
+#articles{
     width: 60%;
     padding: 10px;
     font-family: 'Courier New', sans-serif;
+    display: inline-block;
 }
-article {
+#contacts{
+    display: inline-block;
+    padding: 10px;
+    width: 35%;
+    float: right;
+    font-family: 'Courier New', sans-serif;
+    font-size: 14px;
+}
+/*----------------- article's block -------------------*/
+#articles article {
     padding: 10px;
     width: 100%;
 }
-
-article:hover{
+#articles article:hover{
     border: 1px solid #b1a7aa;
 }
-
-    #articles span{
-        font-size: 24px;
-    }
-
-    #articles .box-for-img{
-        width: 300px;
-        height: 200px;
-        display: inline-block;
-        margin: 25px;
-
-    }
-        #articles .odd .box-for-img{
-            float: right;
-        }
-        #articles .even .box-for-img{
-            float: left;
-        }
-#articles article p{
-    text-align: justify;
+#articles .article-title{
+    font-size: 24px;
 }
+#articles .box-for-img{
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    margin: 25px;
+
+}
+#articles .odd .box-for-img{
+    float: right;
+}
+#articles .even .box-for-img{
+    float: left;
+}
+
 #articles .odd .box-for-img img{
+    position: relative;
+    top: 10px;
+    left: 20px;
     -webkit-transform: rotate(12deg);
     -moz-transform: rotate(12deg);
     -ms-transform: rotate(12deg);
 }
 #articles .even .box-for-img img{
+    position: relative;
+    top: 10px;
+    left: -15px;
     -webkit-transform: rotate(-12deg);
     -moz-transform: rotate(12deg);
     -ms-transform: rotate(12deg);
 }
-/*------------ contact's block -------------------*/
-#contacts{
-    font-family: 'Courier New', sans-serif;
-    font-size: 14px;
-    display: inline-block;
-    padding: 10px;
-    width: 35%;
-    float: right;
+#articles .odd:hover .box-for-img img{
+    position: relative;
+    top: 5px;
+    left: 15px;
+    height: 198px;
+    width: 260px;
 }
+#articles .even:hover .box-for-img img{
+    position: relative;
+    top: 5px;
+    left: -10px;
+    height: 198px;
+    width: 260px;
+}
+/*------------ contact's block -------------------*/
+
     #contacts h3{
         font-family: 'Courier New', sans-serif;
         font-size: 14px;
